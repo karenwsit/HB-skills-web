@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="static/styles.css">
+	<title>Application Form</title>
+</head>
+
+<body>
+	<h1>Application Form</h1>
+	<h3>Please complete every field below.</h3>
+	<form action="/application" method="post">
+		<label>
+			First Name: <input type='text' name='firstname'> <br>
+			Last Name: <input id="lastn" type='text' name='lastname'> <br>
+		Role:
+			<select name='role'>
+				<option value='Software Engineer'>Software Engineer</option>
+				<option value='QA Engineer'>QA Engineer</option>
+				<option value='Product Manager'>Product Manager</option>
+			</select> <br>
+		<input type='submit'>
+		</label>
+	</form>
+
+</body>
+
+
+</html>
