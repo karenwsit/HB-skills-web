@@ -97,7 +97,12 @@
 </fieldset>
 
 <script>
-  // code here for above problem
+http://fellowship.hackbrightacademy.com/exercises/skills-web/  
+var button = document.getElementById("popup-alert-button");
+  function alertClick() {
+    alert("This is an alert. Stop clicking me.");
+  };
+  button.addEventListener('click', alertClick);
 </script>
 
 
@@ -115,7 +120,12 @@
 </fieldset>
 
 <script>
-  // code here for above-problem
+  var button2 = document.getElementById("change-hello-to-goodbye-button");
+  var newText = document.getElementById("message-to-change");
+  function wordChangeClick() {
+    newText.innerHTML = "goodbye";
+  };
+  button2.addEventListener('click', wordChangeClick);
 </script>
 
 <div class="hint">
@@ -144,7 +154,12 @@
 </fieldset>
 
 <script>
-  // code here for above problem
+  var button3 = document.getElementById("prevent-form-submission-button");
+  function alertClick2() {
+    alert("Sorry. Not gonna submit anything.");
+  }
+  button3.addEventListener('click', alertClick2);
+
 </script>
 
 <div class="hint">
@@ -174,22 +189,19 @@
 </fieldset>
 
 <script>
-//  Here's a stub of a function you can use!
+ function reverseString() {
+   var msg = "Porcupines are cute";
+   var newMsg = "";
+   for (var i = msg.length - 1; i >=0; i--){
+      newMsg += msg[i];
+   }
 
-//  function reverseString() {
-//    var msg = "Porcupines are cute";
-//
-//    // do some stuff here to reverse that string into a new variable
-//    var newMsg = "This should be the reversed string";
-//
-//    alert(newMsg);
-//  }
 
-// Here's a stub of event stuff you could use
-//
+   alert(newMsg);
+ }
 
-//  var button = document.getElementById('reverse-string-button');
-//  button.addEventListener('click', reverseString);
+ var button = document.getElementById('reverse-string-button');
+ button.addEventListener('click', reverseString);
 </script>
 
 
@@ -201,7 +213,7 @@
 <p>You should use jQuery for these parts.</p>
 <p>We didn't include jQuery in this document, though&mdash;so your first task is to include it!</p>
 
-
+<script src= "https://code.jquery.com/jquery.js"></script>
 
 <h3>Finding the Button</h3>
 <p>
@@ -213,8 +225,11 @@
 </fieldset>
 
 <script>
-  // code here for above problem
+  $('.tricky-to-find').on('click', function() {
+    alert("Hey you!");
+  });
 </script>
+
 
 <div class="hint">
   <div>
@@ -240,7 +255,11 @@
 </fieldset>
 
 <script>
-  // put your code here
+  function swapCat(){
+    $("img").attr("src", "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcThxTVz-1DP9h3NfPQpZI-iuOBA9KfdEakYyiIfBZlXGhbLxNOYHrNS3_w");
+  };
+
+  $("img").on("dblclick", swapCat);
 </script>
 
 <div class="hint">
@@ -273,7 +292,10 @@
 </fieldset>
 
 <script>
-  // put your code here
+  function makePorc() {
+      $("#cute-porcupine-image").slideDown(2000);
+  };
+  setTimeout($("#make-a-porcupine").on("click", makePorc), 1000);
 </script>
 
 <div class="hint">
@@ -305,7 +327,15 @@
 </fieldset>
 
 <script>
-  // put your code here
+
+  function newMessage(evt) {
+      evt.preventDefault();
+      var inputValue = $("#favorite-food-input").val();
+      $("#agreeable-text").text("I like " + inputValue + ", too!");
+  }
+
+  $("#agreeable-form").on('submit', newMessage);
+
 </script>
 
 <div class="hint">
